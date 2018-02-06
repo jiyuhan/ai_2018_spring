@@ -74,7 +74,7 @@ let rec pair (l1: 'a list) (l2: 'b list): ('a * 'b list) =
     | (h1 :: t1, h2 :: t2) -> ((h1, h2) (pair t1 t2))
     | (_, _) -> failwith "shouldn't exist"
 *)
-pair [4; 2; 5; 9] ["a"; "b"; "c"; "d"]
+// pair [4; 2; 5; 9] ["a"; "b"; "c"; "d"]
 
 (* ================= *)
 
