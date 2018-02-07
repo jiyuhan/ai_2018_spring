@@ -1,0 +1,112 @@
+(*==================================================
+    CS:4420 Artificial Intelligence
+    Spring 2018
+    
+    Homework 1
+    
+    Name: <replace with your name>
+  ==================================================*)
+
+//---------
+// Part 1
+//---------
+
+(* Problem 1 *)
+let rec sum (l: (float list)) =
+    match l with
+        [] -> 0.0
+      | h :: t -> h + (sum t)
+(* Problem 2 *)
+let rec concatAll (l: list<string>) : string =
+    match l with
+        [] -> ""
+      | h :: t -> h + (concatAll t)
+(* Problem 3 *)
+let rec squareAll (l: list<int>): list<int> = 
+    match l with
+        [] -> []
+      | h :: t -> (h * h) :: (squareAll t)
+(* Problem 4 *)
+let rec remove (x: 'a) (l: 'a list): 'a list = 
+    match l with
+        [] -> []
+      | h :: t -> if h = x then remove x t else h :: remove x t
+(* Problem 5 *)
+let rec replaceAll (x: 'a) (y: 'a) (l: 'a list): 'a list =
+    match l with
+        [] -> []
+      | h :: t -> if h = x then y :: replaceAll x y t else h :: replaceAll x y t
+(* Problem 6 *)
+let rec removeDuplicates (l: 'a list): 'a list = 
+    match l with
+        [] -> []
+      | h :: t -> h :: removeDuplicates (remove h t)
+(* Problem 7 *)
+let rec pair (l1: 'a list) (l2: 'b list) =
+    match (l1, l2) with
+      ([], []) -> []
+    | (h1 :: t1, h2 :: t2) -> ((h1, h2) :: (pair t1 t2))
+    | (_, _) -> failwith "shouldn't exist, wrong length?"
+(* Problem 8 *)
+let rec move (l1: 'a list) (l2: 'a list): 'a list = 
+    match l1 with
+        [] -> l2
+      | h1 :: t1 -> move t1 (h1 :: l2)
+(* Problem 9 *)
+let reverse l =
+    move l []
+(* Problem 10 *)
+let rec helperMiddle l1 l2 =
+    match (l1, l2) with
+        (h1 :: t1, h2 :: t2) -> if h1 = h2 then h1 else helperMiddle t1 t2
+      | (_, _) -> failwith "This should never be executed. If did, you probably have an even length of list."
+
+let middle l =
+    helperMiddle l (reverse l)
+
+//---------
+// Part2 
+//---------
+type 'a Tree = 
+    | Empty 
+    | Node of ('a * ('a Tree) * ('a Tree))
+(* Problem 1 *)
+let rec size t = 
+    match t with
+        Empty -> 0
+      | Node (_, Empty, Empty) -> 1
+      | Node (_, t1, t2) -> 1 + size t1 + size t2
+(* Problem 2 *)
+let rec leftmost (t: 'a Tree): 'a option =
+    match t with
+        Empty -> None
+      | Node (a, Empty, _) -> Some a
+      | Node (_, t1, _) -> leftmost t1
+(* Problem 3 *)
+let rec lreplace x t =
+    match t with
+        Empty -> Empty
+      | Node (_, Empty, t2) -> Node (x, Empty, t2)
+      | Node (a, t1, t2) -> Node (a, lreplace x t1, t2)
+(* Problem 4 *)
+let rotateRight t =
+    match t with
+        Empty -> Empty
+      | Node (_, Empty, Empty) -> t
+      | Node (_, Empty, _) -> t
+      | Node (_, _, Empty) -> t
+      | Node (_, Node(_, Empty, Empty), _) -> t
+      | Node (_, Node(_, _, Empty), _) -> t
+      | Node (_, Node(_, Empty, _), _) -> t
+      | Node (a, Node(b, t1, t2), t3) -> Node(b, t1, Node(a, t2, t3))
+(* Problem 5 *)
+let rec flatten t =
+    match t with
+        Empty -> Empty
+      | Node (_, Empty, Empty) -> t
+      | Node (_, Empty, _) -> t
+      | Node (_, _, Empty) -> flatten t
+      | Node (a, Node(b, Empty, Empty), t3) -> flatten (Node(b, Empty, Node(a, Empty, t3)))
+      | Node (a, Node(b, t1, Empty), t3) -> flatten (Node(b, t1, Node(a, Empty, t3)))
+      | Node (a, Node(b, Empty, t2), t3) -> flatten (Node(b, Empty, Node(a, t2, t3)))
+      | Node (a, Node(b, t1, t2), t3) -> flatten (Node(b, t1, Node(a, t2, t3)))
