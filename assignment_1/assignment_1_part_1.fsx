@@ -67,14 +67,18 @@ removeDuplicates [4; 3; 4; 5; 5; 3; 2]
 (* ================= *)
 
 (* Question 7 *)
-(*
-let rec pair (l1: 'a list) (l2: 'b list): ('a * 'b list) =
+
+let rec pair (l1: 'a list) (l2: 'b list) =
     match (l1, l2) with
-      ([], []) -> 
-    | (h1 :: t1, h2 :: t2) -> ((h1, h2) (pair t1 t2))
-    | (_, _) -> failwith "shouldn't exist"
-*)
-// pair [4; 2; 5; 9] ["a"; "b"; "c"; "d"]
+      ([], []) -> []
+    | (h1 :: t1, h2 :: t2) -> ((h1, h2) :: (pair t1 t2))
+    | (_, _) -> failwith "shouldn't exist, wrong length?"
+
+// correct example
+pair [4; 2; 5; 9] ["a"; "b"; "c"; "d"]
+
+// incorrect example
+pair [4; 2; 5; 9] ["a"; "b"; "c"; "d"; "e"]
 
 (* ================= *)
 
@@ -100,13 +104,17 @@ reverse [1; 2; 3; 4]
 
 (* Question 10 *)
     
-let rec helper_middle l1 l2 =
+let rec helperMiddle l1 l2 =
     match (l1, l2) with
-        (h1 :: t1, h2 :: t2) -> if h1 = h2 then h1 else helper_middle t1 t2
-      | (_, _) -> failwith "This should never be executed"
+        (h1 :: t1, h2 :: t2) -> if h1 = h2 then h1 else helperMiddle t1 t2
+      | (_, _) -> failwith "This should never be executed. If did, you probably have an even length of list."
 
 
 let middle l =
-    helper_middle l (reverse l)
+    helperMiddle l (reverse l)
 
+// length odd
 middle ['A'; 'B'; 'C'; 'D'; 'E']
+
+// length even
+middle ['A'; 'B'; 'C'; 'D'; 'E'; 'F']
