@@ -32,7 +32,8 @@ let rec squareAll (l: list<int>): list<int> =
 let rec remove (x: 'a) (l: 'a list): 'a list = 
     match l with
         [] -> []
-      | h :: t -> if h = x then remove x t else h :: remove x t
+      | h :: t when h = x -> remove x t
+      | h :: t -> h :: remove x t
 
 (* ================= *)
 
@@ -82,11 +83,21 @@ let reverse l =
 
 (* Question 10 *)
     
-let rec helperMiddle l1 l2 =
-    match (l1, l2) with
-        (h1 :: t1, h2 :: t2) -> if h1 = h2 then h1 else helperMiddle t1 t2
-      | (_, _) -> failwith "This should never be executed. If did, you probably have an even length of list."
+let popHead l =
+    match reverse l with
+        [] -> failwith "Wrong length"
+      | [h] -> []
+      | _ :: t -> t
+
+let rec popHeadAndTail (l: 'a list): 'a list =
+    match reverse l with
+        [] -> failwith "Wrong length"
+      | [h] -> [h]
+      | _ :: t -> popHeadAndTail (popHead t)
 
 
 let middle l =
-    helperMiddle l (reverse l)
+    match popHeadAndTail l with
+        [] -> failwith "Something went wrong"
+      | [h] -> h
+      | _ :: _ -> failwith "Something went wrong..."
