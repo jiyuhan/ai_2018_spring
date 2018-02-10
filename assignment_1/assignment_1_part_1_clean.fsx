@@ -86,7 +86,7 @@ let reverse l =
 let popHead l =
     match reverse l with
         [] -> failwith "Wrong length"
-      | [h] -> []
+      | [_] -> []
       | _ :: t -> t
 
 let rec popHeadAndTail (l: 'a list): 'a list =

@@ -105,10 +105,15 @@ reverse [1; 2; 3; 4]
 
 (* Question 10 *)
     
+let rec helperMiddle l1 l2 =
+    match (l1, l2) with
+        (h1 :: t1, h2 :: t2) -> if h1 = h2 then h1 else helperMiddle t1 t2
+      | (_, _) -> failwith "This should never be executed. If did, you probably have an even length of list."
+
 let popHead l =
     match reverse l with
         [] -> failwith "Wrong length"
-      | [h] -> []
+      | [_] -> []
       | _ :: t -> t
 
 let rec popHeadAndTail (l: 'a list): 'a list =
