@@ -4,7 +4,7 @@
     
     Homework 3
     
-    Name: <your name here>
+    Name: Thomas Han
 
   ==================================================*)
 
