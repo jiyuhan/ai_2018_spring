@@ -1,0 +1,31 @@
+(PART I)
+
+1. 
+    a.      Occupation(Emily, Doctor) ∨ Occupation(Emily, Lawyer)
+    b.      Occupation(Joe, Actor) ∧ (∃(x) (x ≠ Actor) ∧ Occupation(Joe, x))
+    c.      ∀x Occupation(x, Surgeon) ⇒ Occupation(x, Doctor)
+    d.      ¬(∃x Occupation(x, lawyer) ∧ Customer(Joe, x)) // note: use AND for some
+    e.      ∃x Boss(Emily, x) ∧ Occupation(x, lawyer)
+    f.      ∃x Occupation(x, lawyer) ∧ ∀y Customer(y, x) ⇒ Occupation(y, Doctor)
+    g.      ∀x Occupation(x, surgeon) ⇒ (∃y Occupation(y, lawyer) ∧ Customer(x, y))
+
+2.
+    i.      Everyone needs someone.
+    ii.     John loves everything that Mary loves.
+    iii.    Everybody has a heart. (!)
+    iv.     Everyone has two different parents.
+    v.      Everyone can only have two parents. (!)
+    vi.     Students who love AI like CS4420
+    vii.    Not everybody likes something. (!)
+    viii.   Some programs John wrote has bugs in them.
+    ix.     All programs that John wrote has some bugs in them.
+    x.      Mary doesn't need anything. (!)
+    xi.     
+
+
+(PART II)
+
+(Extra credit)
+Answer:     If we have WA = red and have another state, say New South Wales = red,
+            or simply NSW = red, then we could do deduction on WA = red and NSW = red,
+            and get WA = NSW, which is not the case for Western Australia and New South Wales.
