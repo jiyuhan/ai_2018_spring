@@ -10,18 +10,36 @@
     g.      ∀x Occupation(x, surgeon) ⇒ (∃y Occupation(y, lawyer) ∧ Customer(x, y))
 
 2.
-    i.      Everyone needs someone.
-    ii.     John loves everything that Mary loves.
-    iii.    Everybody has a heart. (!)
-    iv.     Everyone has two different parents.
-    v.      Everyone can only have two parents. (!)
-    vi.     Students who love AI like CS4420
-    vii.    Not everybody likes something. (!)
-    viii.   Some programs John wrote has bugs in them.
-    ix.     All programs that John wrote has some bugs in them.
-    x.      Mary doesn't need anything. (!)
-    xi.     
-
+    a)
+        i.      Everyone needs someone.
+        ii.     John loves everything that Mary loves.
+        iii.    Everybody has a heart. (!)
+        iv.     Everyone has two different parents.
+        v.      Everyone can only have two parents. (!)
+        vi.     Students who love AI like CS4420
+        vii.    Not everybody likes something. (!)
+        viii.   Some programs John wrote has bugs in them.
+        ix.     Programs that John wrote has some bugs in them.
+        x.      Mary doesn't need anything. (!)
+        xi.     Students are either awake or not awake.
+        xii.    American students don't drink wine.
+        xiii.   Everybody's mother is their parent.
+        xiv.    Not everybody knows who his/her mother is.
+    b)
+        i.      ∀x∀y (Student(x) ∧ Museum(y) ⇒ Love(x, y))
+        ii.     ∃x(Student(x) ⇒ ∀y(Likes(x, y) ∧ Museum(y) ∧ Good(y)))
+        iii.    ∃x(American(x) ∧ Student(x) ⇒ ∀y(Likes(x, y) ∧ Wine(y) ∧ From(y, France)))
+        iv.     ∃x(American(x) ∧ ∀y(Loves(x, y) ∧ Wine(y) ∧ From(y, France)) ⇒ ∀z(¬Likes(x, z) ∧ Wine(z) ∧ American(z))
+        v.      ∀x∀y(Student(x) ∧ Class(x) ∧ Teaches(Fred, y) ⇒ ¬Likes(x, y))
+        vi.     ∀x(Museum(x) ∧ (x ≠ Louvre) ⇒ Visited(Jane, x))
+        vii.    ∀x(Visited(Jane, x) ∧ Museum(x) ⇒ Knows(Fred, x))
+        viii.   ∀x(Person(x) ⇒ ∃y(From(y, France)))
+        ix.     ∀x(Wine(x) ⇒ Drinks(Fred, x))
+        x.      ∀x∀y(Wine(x) ∧ ¬Wine(y) ⇒ Drinks(Fred, x) ∧ ¬Drinks(Fred, y))
+        xi.     ∃x(Person(x) ∧ ∀y(Program(y) ∧ Wrote(x, y) ⇒ Knows(Fred, x))) (!)
+        xii.    
+3.
+    i.
 
 (PART II)
 
