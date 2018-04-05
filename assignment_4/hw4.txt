@@ -13,14 +13,14 @@
     a)
         i.      Everyone needs someone.
         ii.     John loves everything that Mary loves.
-        iii.    Everybody has a heart. (!)
+        iii.    Everybody has a heart. <!>
         iv.     Everyone has two different parents.
-        v.      Everyone can only have two parents. (!)
+        v.      Everyone can only have two parents. <!>
         vi.     Students who love AI like CS4420
-        vii.    Not everybody likes something. (!)
+        vii.    Not everybody likes something. <!>
         viii.   Some programs John wrote has bugs in them.
         ix.     Programs that John wrote has some bugs in them.
-        x.      Mary doesn't need anything. (!)
+        x.      Mary doesn't need anything. <!>
         xi.     Students are either awake or not awake.
         xii.    American students don't drink wine.
         xiii.   Everybody's mother is their parent.
@@ -31,17 +31,34 @@
         iii.    ∃x(American(x) ∧ Student(x) ⇒ ∀y(Likes(x, y) ∧ Wine(y) ∧ From(y, France)))
         iv.     ∃x(American(x) ∧ ∀y(Loves(x, y) ∧ Wine(y) ∧ From(y, France)) ⇒ ∀z(¬Likes(x, z) ∧ Wine(z) ∧ American(z))
         v.      ∀x∀y(Student(x) ∧ Class(x) ∧ Teaches(Fred, y) ⇒ ¬Likes(x, y))
-        vi.     ∀x(Museum(x) ∧ (x ≠ Louvre) ⇒ Visited(Jane, x))
+        vi.     ∀x(Museum(x) ∧ x ≠ Louvre ⇒ Visited(Jane, x))
         vii.    ∀x(Visited(Jane, x) ∧ Museum(x) ⇒ Knows(Fred, x))
         viii.   ∀x(Person(x) ⇒ ∃y(From(y, France)))
         ix.     ∀x(Wine(x) ⇒ Drinks(Fred, x))
         x.      ∀x∀y(Wine(x) ∧ ¬Wine(y) ⇒ Drinks(Fred, x) ∧ ¬Drinks(Fred, y))
-        xi.     ∃x(Person(x) ∧ ∀y(Program(y) ∧ Wrote(x, y) ⇒ Knows(Fred, x))) (!)
-        xii.    
-3.
-    i.
+        xi.     ∃x(Person(x) ∧ ∀y(Program(y) ∧ Wrote(x, y) ⇒ Knows(Fred, x))) <!>
+        xii.    ∀x∀y(Person(x) ∧ Time(y) ⇒ Teases(Fred, x, y))
+        xiii.   ∀x(Person(x) ∧ ¬Parent(x, x) ⇒ ∃y∃z(Person(y) ∧ Person(z) ∧ Parent(y, x) ∧ Parent(z, x) ∧ y ≠ z ∧ ∀w(w ≠ x ∧ w ≠ y ∧ w ≠ z ∧ ¬Parent(w, x))))
+        xiv.    ∃x∃y(Person(x) ∧ Person(y) ∧ From(mother(y), France) ⇒ Knows(x, y))
+        xv.     ∀x(Person(x) ∧ Knows(x, mother(Jane)) ⇒ Loves(x, Jane))
+        xvi.    ∀x(Class(x) ∧ Teaches(mother(mother(Fred)), x) ⇒ Loves(Jane, x))
+        xvii.   <?>
+        xviii.  ∀x(Person(x) ∧ ∃y(Has(x, y) ∧ Heart(y) ∧ Good(y)) ⇒ Loves(Jane, x))
+        xiv.    ∀x(Person(x) ⇒ ∃y(¬Has(x, y) ∧ Wants(x, y))) <!>
 
 (PART II)
+1.
+    a)      
+    b)      asdf
+2.
+    a)      true
+    b)      true
+    c)      asdf
+    d)      asdf
+    e)      asdf
+    f)      asdf
+    g)      asdf
+    h)      asdf
 
 (Extra credit)
 Answer:     If we have WA = red and have another state, say New South Wales = red,
