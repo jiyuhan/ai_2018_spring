@@ -38,7 +38,7 @@
                 
         iv.     ∃x(American(x) ∧ 
                     ∀y(Loves(x, y) ∧ Wine(y) ∧ From(y, France) ⇒ 
-                        ∀z(Wine(z) ∧ American(z) ⇒ ¬Likes(x, z)
+                        ∀z(Wine(z) ∧ American(z) ⇒ ¬Likes(x, z))
                     )
                 )
                 
@@ -88,8 +88,8 @@
 
 (PART II)
 1.
-    a)      {∀x P(x) ⇒ Q(x), P(A10)} |= Q(A10) (definition of entailment)
-            {Spouse(Jim, Laura), ¬(Jim = George)} |= ¬Spouse(George, Laura) ?
+    a)      {∀x P(x) ⇒ Q(x), P(A10)} |= Q(A10) (example of entailment)
+            If {Spouse(Jim, Laura), ¬(Jim = George)} |= ¬Spouse(George, Laura) ?
             The knowledge base doesn't explicitly mention George can't be Laura's
             spouse (because Jim is the spouse of Laura). Therefore, it is possible
             for someone to have multiple spouse relation.
@@ -99,11 +99,11 @@
     b)      Invalid; because "<" is not defined in FOL so one can't conclude a < b ⇒ a ≠ b
     c)      Valid; because it is merely checking if there's some two elements equal
             to each other for some x and some y.
-    d)      Valid; because it <!>
+    d)      Valid; because it doesn't contain undefined symbol and everything else makes sense.
     e)      Valid; because ∀x is everything and ∃y is something. ∃y should be a subset of ∀x.
     f)      Invalid; ∃x should be a subset of ∀y. Therefore, lhs doesn't cover all of the domain of rhs.
     g)      Valid; because ∀x means everything... including f(g(a, b)) whatever it might be.
-    h)      Invalid because ∀x
+    h)      Invalid; because use of ∀x in both lhs and rhs.
 
 (Extra credit)
 Answer:     If we have WA = red and have another state, say New South Wales = red,
