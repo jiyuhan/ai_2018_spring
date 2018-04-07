@@ -13,18 +13,18 @@
     a)
         i.      Everyone needs someone.
         ii.     John loves everything that Mary loves.
-        iii.    Everybody has a heart. <!>
+        iii.    Everybody has a heart.
         iv.     Everyone has two different parents.
-        v.      Everyone can only have two parents. <!>
+        v.      Everyone can only have two parents.
         vi.     Students who love AI like CS4420
-        vii.    Not everybody likes something. <!>
+        vii.    Not everybody likes something.
         viii.   Some programs John wrote has bugs in them.
         ix.     Programs that John wrote has some bugs in them.
-        x.      Mary doesn't need anything. <!>
+        x.      Mary doesn't need anything.
         xi.     Students are either awake or not awake.
         xii.    American students don't drink wine.
         xiii.   Everybody's mother is their parent.
-        xiv.    Not everybody knows who his/her mother is.
+        xiv.    Not everybody knows whom his/her mother is.
     b)
         i.      ∀x∀y (Student(x) ∧ Museum(y) ⇒ Love(x, y))
         ii.     ∃x(Student(x) ∧ 
