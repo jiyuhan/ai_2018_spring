@@ -58,15 +58,15 @@
                     )
                 )
         xiv.    ∃x∃y(Person(x) ∧ Person(y) ∧ From(mother(y), France) ∧ Knows(x, y))
-        xv.     ∀x(Person(x) ∧ Knows(x, mother(Jane)) ⇒ Loves(x, Jane))
+        xv.     ∀x(Person(x) ∧ Knows(x, mother(Jane)) ⇒ Loves(x, mother(Jane)))
         xvi.    ∀x(Class(x) ∧ Teaches(mother(mother(Fred)), x) ⇒ Loves(Jane, x))
-        xvii.   <?>
+        xvii.   ∀x∀y∀z(Person(x) ∧ ¬Likes(x, z) ∧ Person(z) ∧ Loves (x, y) ∧ Person(y) ⇒ y ≠ z)
         xviii.  ∀x(Person(x) ⇒ 
                     ∃y(Has(x, y) ∧ Heart(y) ∧ Good(y) ∧ Loves(Jane, x))
                 )
         xiv.    ∀x(Person(x) ⇒ 
                     ∃y(¬Has(x, y) ∧ Wants(x, y))
-                ) <!>
+                )
 
 (PART II)
 1.
