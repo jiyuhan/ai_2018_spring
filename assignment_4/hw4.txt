@@ -27,24 +27,44 @@
         xiv.    Not everybody knows who his/her mother is.
     b)
         i.      ∀x∀y (Student(x) ∧ Museum(y) ⇒ Love(x, y))
-        ii.     ∃x(Student(x) ⇒ ∀y(Likes(x, y) ∧ Museum(y) ∧ Good(y)))
-        iii.    ∃x(American(x) ∧ Student(x) ⇒ ∀y(Likes(x, y) ∧ Wine(y) ∧ From(y, France)))
-        iv.     ∃x(American(x) ∧ ∀y(Loves(x, y) ∧ Wine(y) ∧ From(y, France)) ⇒ ∀z(¬Likes(x, z) ∧ Wine(z) ∧ American(z))
+        ii.     ∃x(Student(x) ∧ 
+                    ∀y(Museum(y) ∧ Good(y) ⇒ Likes(x, y))
+                )
+        iii.    ∃x(American(x) ∧ Student(x) ∧ 
+                    ∀y(Wine(y) ∧ From(y, France) ⇒ Likes(x, y))
+                )
+        iv.     ∃x(American(x) ∧ 
+                    ∀y(Loves(x, y) ∧ Wine(y) ∧ From(y, France) ⇒ 
+                        ∀z(Wine(z) ∧ American(z) ⇒ ¬Likes(x, z)
+                    )
+                )
         v.      ∀x∀y(Student(x) ∧ Class(x) ∧ Teaches(Fred, y) ⇒ ¬Likes(x, y))
         vi.     ∀x(Museum(x) ∧ x ≠ Louvre ⇒ Visited(Jane, x))
         vii.    ∀x(Visited(Jane, x) ∧ Museum(x) ⇒ Knows(Fred, x))
-        viii.   ∀x(Person(x) ⇒ ∃y(From(y, France)))
+        viii.   ∀x(Person(x) ⇒ 
+                    ∃y(From(y, France))
+                )
         ix.     ∀x(Wine(x) ⇒ Drinks(Fred, x))
         x.      ∀x∀y(Wine(x) ∧ ¬Wine(y) ⇒ Drinks(Fred, x) ∧ ¬Drinks(Fred, y))
-        xi.     ∃x(Person(x) ∧ ∀y(Program(y) ∧ Wrote(x, y) ⇒ Knows(Fred, x))) <!>
+        xi.     ∃x(Person(x) ∧ 
+                    ∀y(Program(y) ∧ Wrote(x, y) ⇒ Knows(Fred, x))
+                ) <!>
         xii.    ∀x∀y(Person(x) ∧ Time(y) ⇒ Teases(Fred, x, y))
-        xiii.   ∀x(Person(x) ∧ ¬Parent(x, x) ⇒ ∃y∃z(Person(y) ∧ Person(z) ∧ Parent(y, x) ∧ Parent(z, x) ∧ y ≠ z ∧ ∀w(w ≠ x ∧ w ≠ y ∧ w ≠ z ∧ ¬Parent(w, x))))
-        xiv.    ∃x∃y(Person(x) ∧ Person(y) ∧ From(mother(y), France) ⇒ Knows(x, y))
+        xiii.   ∀x(Person(x) ∧ ¬Parent(x, x) ⇒ 
+                    ∃y∃z(Person(y) ∧ Person(z) ∧ Parent(y, x) ∧ Parent(z, x) ∧ y ≠ z ∧ 
+                        ∀w(w ≠ x ∧ w ≠ y ∧ w ≠ z ⇒ ¬Parent(w, x))
+                    )
+                )
+        xiv.    ∃x∃y(Person(x) ∧ Person(y) ∧ From(mother(y), France) ∧ Knows(x, y))
         xv.     ∀x(Person(x) ∧ Knows(x, mother(Jane)) ⇒ Loves(x, Jane))
         xvi.    ∀x(Class(x) ∧ Teaches(mother(mother(Fred)), x) ⇒ Loves(Jane, x))
         xvii.   <?>
-        xviii.  ∀x(Person(x) ∧ ∃y(Has(x, y) ∧ Heart(y) ∧ Good(y)) ⇒ Loves(Jane, x))
-        xiv.    ∀x(Person(x) ⇒ ∃y(¬Has(x, y) ∧ Wants(x, y))) <!>
+        xviii.  ∀x(Person(x) ⇒ 
+                    ∃y(Has(x, y) ∧ Heart(y) ∧ Good(y) ∧ Loves(Jane, x))
+                )
+        xiv.    ∀x(Person(x) ⇒ 
+                    ∃y(¬Has(x, y) ∧ Wants(x, y))
+                ) <!>
 
 (PART II)
 1.
