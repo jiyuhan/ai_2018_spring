@@ -102,7 +102,7 @@
     d)      Valid; because it <!>
     e)      Valid; because ∀x is everything and ∃y is something. ∃y should be a subset of ∀x.
     f)      Invalid; ∃x should be a subset of ∀y. Therefore, lhs doesn't cover all of the domain of rhs.
-    g)       
+    g)      Valid; because ∀x means everything... including f(g(a, b)) whatever it might be.
     h)      Invalid because ∀x
 
 (Extra credit)
