@@ -47,8 +47,10 @@
         ix.     ∀x(Wine(x) ⇒ Drinks(Fred, x))
         x.      ∀x∀y(Wine(x) ∧ ¬Wine(y) ⇒ Drinks(Fred, x) ∧ ¬Drinks(Fred, y))
         xi.     ∃x(Person(x) ∧ 
-                    ∀y(Program(y) ∧ Wrote(x, y) ⇒ Knows(Fred, x))
-                ) <!>
+                    ∃y(Bug(y) ∧ 
+                        ∀z(Program(z) ∧ Wrote(x, z)) ∧ In(y, z) ⇒ Knows(Fred, x))
+                     )
+                )
         xii.    ∀x∀y(Person(x) ∧ Time(y) ⇒ Teases(Fred, x, y))
         xiii.   ∀x(Person(x) ∧ ¬Parent(x, x) ⇒ 
                     ∃y∃z(Person(y) ∧ Person(z) ∧ Parent(y, x) ∧ Parent(z, x) ∧ y ≠ z ∧ 
