@@ -77,13 +77,13 @@
             for someone to have multiple spouse relation.
     b)      ∀x(¬(Jim = x) ⇒ ¬Spouse(x, Laura))
 2.
-    a)      true
-    b)      true
-    c)      asdf
-    d)      asdf
-    e)      asdf
-    f)      asdf
-    g)      asdf
+    a)      Valid; because equality symbol by definition has a symmetric relation.
+    b)      Invalid; because "<" is not defined in FOL so one can't conclude a < b ⇒ a ≠ b
+    c)      Valid; because it is merely checking if there's some two elements equal to each other.
+    d)      Valid; because it <!>
+    e)      Valid; because 
+    f)      Invalid;
+    g)       
     h)      asdf
 
 (Extra credit)
