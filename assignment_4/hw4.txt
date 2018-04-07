@@ -70,8 +70,12 @@
 
 (PART II)
 1.
-    a)      
-    b)      asdf
+    a)      {∀x P(x) ⇒ Q(x), P(A10)} |= Q(A10) (definition of entailment)
+            {Spouse(Jim, Laura), ¬(Jim = George)} |= ¬Spouse(George, Laura) ?
+            The knowledge base doesn't explicitly mention George can't be Laura's
+            spouse (because Jim is the spouse of Laura). Therefore, it is possible
+            for someone to have multiple spouse relation.
+    b)      ∀x(¬(Jim = x) ⇒ ¬Spouse(x, Laura))
 2.
     a)      true
     b)      true
