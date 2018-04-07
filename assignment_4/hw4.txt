@@ -97,12 +97,13 @@
 2.
     a)      Valid; because equality symbol by definition has a symmetric relation.
     b)      Invalid; because "<" is not defined in FOL so one can't conclude a < b ⇒ a ≠ b
-    c)      Valid; because it is merely checking if there's some two elements equal to each other.
+    c)      Valid; because it is merely checking if there's some two elements equal
+            to each other for some x and some y.
     d)      Valid; because it <!>
-    e)      Valid; because 
-    f)      Invalid;
+    e)      Valid; because ∀x is everything and ∃y is something. ∃y should be a subset of ∀x.
+    f)      Invalid; ∃x should be a subset of ∀y. Therefore, lhs doesn't cover all of the domain of rhs.
     g)       
-    h)      asdf
+    h)      Invalid because ∀x
 
 (Extra credit)
 Answer:     If we have WA = red and have another state, say New South Wales = red,
