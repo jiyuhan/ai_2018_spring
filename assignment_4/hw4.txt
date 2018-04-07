@@ -24,7 +24,7 @@
         xi.     Students are either awake or not awake.
         xii.    American students don't drink wine.
         xiii.   Everybody's mother is their parent.
-        xiv.    Not everybody knows whom his/her mother is.
+        xiv.    Not everybody knows who his/her mother is.
     b)
         i.      ∀x∀y (Student(x) ∧ Museum(y) ⇒ Love(x, y))
         ii.     ∃x(Student(x) ∧ 
